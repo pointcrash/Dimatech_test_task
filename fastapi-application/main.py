@@ -9,7 +9,6 @@ from create_fastapi_app import create_app
 
 
 logging.basicConfig(
-    # level=logging.INFO
     format=settings.logging.log_format,
 )
 

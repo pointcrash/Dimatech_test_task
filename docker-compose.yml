@@ -1,18 +1,20 @@
 services:
 
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - pg
+
   pg:
     image: postgres
     environment:
-      POSTGRES_DB: shop
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
+      POSTGRES_DB: Dimatech
+      POSTGRES_USER: Dimatech
+      POSTGRES_PASSWORD: Dimatech
     ports:
       - "5432:5432"
-
-  adminer:
-    image: adminer
-    ports:
-      - "8080:8080"
 
   pgadmin:
     image: dpage/pgadmin4
